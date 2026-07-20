@@ -23,7 +23,8 @@ function buscarAlunos(nome){
 console.log(buscarAlunos("Helena"));
 
 
-function calcularMedia(alunos){
+function calcularMedia
+(alunos){
     if(notas.length === 0){
         return 0;
     }
@@ -58,3 +59,35 @@ function situacao(Media){
 let media = calcularMedia(alunos[0]);
 
 console.log(situacao(Media));
+
+function cadastrarAluno() {
+    let nome = prompt("Digite o nome do aluno:");
+
+    if(buscarAluno(nome)!== undefined){
+        alert("Aluno já está cadastrado! ");
+    
+        return;
+    }
+
+    alunos.push({
+        nome: nome,
+        notas: []
+    });
+
+    alert("Aluno cadastrado com sucesso!");
+}
+
+function listarAlunos() {
+    if (alunos.length === 0) {
+        alert("Nenhum aluno cadastrado");
+        return;
+    }
+
+    let texto = "Alunos cadastrados: \n";
+
+    for (let i = 0; i < alunos.length; i++) {
+        texto += alunos[i].nome + "\n";
+    }
+
+    alert(texto);
+}
