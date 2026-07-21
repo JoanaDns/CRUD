@@ -192,7 +192,7 @@ function listarAprovados() {
     alert(texto);
 }
 
-function submenuCadastro() {
+   function  submenuCadastro() {
     let opcao;
 
     do {
@@ -278,3 +278,4 @@ function menuPrincipal() {
     } while (opcao !== 0);
 }
 
+    menuPrincipal();
